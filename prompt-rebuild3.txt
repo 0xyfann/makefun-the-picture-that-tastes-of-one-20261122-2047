@@ -1,0 +1,17 @@
+Rebuild make.fun competition the-picture-that-tastes-of-one-20261122-2047 ($20) from scratch in a fresh session — THIS BUILD IS BEING LIVE-RECORDED by the make.fun kit (a `makefun record` process is already running and watching this session; do NOT stop it, do NOT run any makefun record/submit commands yourself).
+
+STRICT RULES (these decide whether the entry passes):
+- DO NOT read, open, or cat the finished entry file ~/workspace/makefun/the-picture-that-tastes-of-one-20261122-2047/main.py. Reading it makes your lines "read" instead of "authored" and the entry FAILS.
+- DO read: ~/workspace/makefun/the-picture-that-tastes-of-one-20261122-2047/BUILD-NOTES.md (design spec), ~/workspace/makefun/the-picture-that-tastes-of-one-20261122-2047/README.md, ~/workspace/makefun/the-picture-that-tastes-of-one-20261122-2047/prompt.txt, and the kit at ~/workspace/makefun/kit/the-picture-that-tastes-of-one-20261122-2047-kit/the-picture-that-tastes-of-one-20261122-2047-kit/ (requirements, grader). LICENSE and .makefun/owner.json already exist — do not touch them.
+- FIRST delete the existing main.py, then write it fresh in several chunks (write → test → edit → retest), so the file's final content comes from 2 or more write/edit messages. Do NOT write the whole file in one message and never touch it again.
+
+WHAT TO BUILD:
+- A Python 3.13 program (stdlib only, no pip packages) at ~/workspace/makefun/the-picture-that-tastes-of-one-20261122-2047/main.py that generates a 1024x1024 PNG of a top-down bowl of ramen (the picture that tastes of ramen). Deterministic: same output every run. Seed 20261122. Steam only above the rim, no artifacts. The program writes entry.png to the output directory (env MAKEFUN_OUTPUT_DIR or ./test-out). Check the kit's entrypoint docs for the exact invocation the grader uses and match it.
+- Keep the existing README.md (3 make.fun badges) and LICENSE (SPDX line 1). Do NOT update BUILD-NOTES.md.
+
+SELF-TEST (do this yourself before reporting):
+- Run main.py twice; both runs exit 0; the two PNGs byte-identical (sha256 match). Confirm 1024x1024, under the 1,048,576-byte limit. Visually inspect the PNG (open it and look): ramen top-down, steam only above the rim, no artifacts.
+- Report: main.py sha256 + byte count + line count, PNG sha256 + byte count + dimensions, self-test results (exit codes, byte-identical yes/no), visual check result.
+- Write your full brief/prompt into ~/workspace/makefun/the-picture-that-tastes-of-one-20261122-2047/prompt-rebuild3.txt (byte-exact copy of the task you were given — copy this message into that file).
+
+DEADLINE: entries close 04:57 WIB (21:47 UTC). It is now ~04:13 WIB. Work fast. Do NOT submit, do NOT create a GitHub repo, do NOT run makefun record/submit, do NOT show any API key. Just build + self-test + report.
