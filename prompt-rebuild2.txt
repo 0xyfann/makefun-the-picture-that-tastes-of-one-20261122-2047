@@ -1,0 +1,21 @@
+Rebuild make.fun competition the-picture-that-tastes-of-one-20261122-2047 ($20) from scratch in a fresh session. This is a REDO: the first rebuild failed the kit's transcript gates (thinking_reproduces 0.0% authored, thinking_revised fail) because the worker read the finished entry files and re-typed them. You must write the code yourself WITHOUT opening the finished entry files.
+
+STRICT RULES (these decide whether the entry passes):
+- DO NOT read, open, or cat these files: ~/workspace/makefun/the-picture-that-tastes-of-one-20261122-2047/main.py, and do NOT open the reference PNGs (~/workspace/makefun/test-out1/entry.png, test-out2/entry.png). Reading them makes your lines "read" instead of "authored" and the entry FAILS the check.
+- DO read: ~/workspace/makefun/the-picture-that-tastes-of-one-20261122-2047/BUILD-NOTES.md (design spec + minute-by-minute budget), ~/workspace/makefun/the-picture-that-tastes-of-one-20261122-2047/README.md, ~/workspace/makefun/the-picture-that-tastes-of-one-20261122-2047/prompt.txt, and the kit at ~/workspace/makefun/kit/the-picture-that-tastes-of-one-20261122-2047-kit/the-picture-that-tastes-of-one-20261122-2047-kit/ (requirements, grader). LICENSE and .makefun/owner.json already exist and are fine — do not touch them.
+- Write main.py yourself in several chunks (write → test → edit → retest), so the file's final content comes from 2 or more write/edit messages. Do NOT write the whole file in one message and never touch it again.
+
+WHAT TO BUILD:
+- A Python 3.13 program (stdlib only, no pip packages) at ~/workspace/makefun/the-picture-that-tastes-of-one-20261122-2047/main.py that generates a 1024x1024 PNG of a top-down bowl of ramen (the picture that tastes of ramen). Deterministic: same output every run. Seed 20261122. The reference build's output PNG is 305,675 bytes, sha256 1ac7114d0094e9d9a18139c9021d9d7adea36ab071226beb6d566907150011d8 — your output should match this hash if you follow BUILD-NOTES.md exactly (same seed, same drawing order). Steam only above the rim, no artifacts.
+- The program reads nothing from /input (no cases file for this competition) — it just writes entry.png to the output directory (env MAKEFUN_OUTPUT_DIR or ./test-out). Check the kit's entrypoint/grade-local docs for the exact invocation the grader uses and match it.
+- Keep the existing README.md (3 make.fun badges) and LICENSE (SPDX line 1). Update BUILD-NOTES.md only if your design differs from it.
+
+SELF-TEST (do this yourself before reporting):
+- Run main.py twice; both runs exit 0; the two PNGs byte-identical (sha256 match). Confirm 1024x1024, ~305,675 bytes. Visually inspect the PNG (open it and look): ramen top-down, steam only above the rim, no artifacts.
+- Run the kit's grade-local if available.
+
+REPORT BACK (to the main chat, as your final message):
+- main.py sha256 + byte count, PNG sha256 + byte count + dimensions, self-test results (exit codes, byte-identical yes/no), visual check result, and any design deviations from BUILD-NOTES.md.
+- Write your full brief/prompt into ~/workspace/makefun/the-picture-that-tastes-of-one-20261122-2047/prompt-rebuild2.txt (byte-exact copy of the task you were given — copy this message into that file).
+
+DEADLINE: entries close 04:57 WIB (21:47 UTC). It is now ~03:55 WIB. Work fast — this is a 70-minute window. Do NOT submit, do NOT create a GitHub repo, do NOT show any API key.
